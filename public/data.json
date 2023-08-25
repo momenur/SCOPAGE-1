@@ -362,40 +362,5 @@
         "user": "Sadik Istiak",
         "attachment" : 25,
         "category": "completed"
-    },
-    {
-        "_id": "642c155b2c4774f05c36ee9a",
-        "clientName": "Client Name",
-        "user": "Sadik Istiak",
-        "attachment" : 25,
-        "category": "overdoseReview"
-    },
-    {
-        "_id": "642c155b2c4774f05c36eeab",
-        "clientName": "Client Name",
-        "user": "Sadik Istiak",
-        "attachment" : 25,
-        "category": "overdoseReview"
-    },
-    {
-        "_id": "642c155b2c4774f05c36eeb1",
-        "clientName": "Client Name",
-        "user": "Sadik Istiak",
-        "attachment" : 25,
-        "category": "overdoseReview"
-    },
-    {
-        "_id": "642c155b2c4774f05c36eead",
-        "clientName": "Client Name",
-        "user": "Sadik Istiak",
-        "attachment" : 25,
-        "category": "overdoseReview"
-    },
-    {
-        "_id": "642c155b2c4774f05c36eeae",
-        "clientName": "Client Name",
-        "user": "Sadik Istiak",
-        "attachment" : 25,
-        "category": "overdoseReview"
     }
 ]
