@@ -1,19 +1,28 @@
-import { useEffect, useState } from "react";
+
 import Container from "../components/Container/Container";
 import { ScrollMenu } from "react-horizontal-scrolling-menu";
 import 'react-horizontal-scrolling-menu/dist/styles.css';
+import useCards from "../hooks/useCards";
+import { RotatingLines } from "react-loader-spinner";
 const Main = () => {
-    const [scoPageData, setScoPageData] = useState([])
-    useEffect(() => {
-        fetch('data.json')
-            .then(res => res.json())
-            .then(data => setScoPageData(data))
-    }, [])
-    const incomplete = scoPageData.filter(data => data.category === "incomplete")
-    const toDo = scoPageData.filter(data => data.category === "todo")
-    const doing = scoPageData.filter(data => data.category === "doing")
-    const underReview = scoPageData.filter(data => data.category === "underReview")
-    const completed = scoPageData.filter(data => data.category === "completed")
+    const [cards, isLoading] = useCards()
+    const incomplete = cards.filter(data => data.category === "incomplete")
+    const toDo = cards.filter(data => data.category === "todo")
+    const doing = cards.filter(data => data.category === "doing")
+    const underReview = cards.filter(data => data.category === "underReview")
+    const completed = cards.filter(data => data.category === "completed")
+
+    if (isLoading) {
+        return <div className="flex items-center justify-center h-screen">
+            <RotatingLines
+                strokeColor="grey"
+                strokeWidth="5"
+                animationDuration="0.75"
+                width="96"
+                visible={true}
+            />
+        </div>
+    }
 
     return (
         <div>
