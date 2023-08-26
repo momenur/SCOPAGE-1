@@ -15,6 +15,7 @@
     "react-horizontal-scrolling-menu": "^4.1.0",
     "react-icons": "^4.10.1",
     "react-loader-spinner": "^5.3.4",
+    "react-pure-modal": "^2.2.5",
     "react-query": "^3.39.3",
     "simplebar-react": "^3.2.4"
   },

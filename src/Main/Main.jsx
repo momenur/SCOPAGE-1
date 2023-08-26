@@ -1,17 +1,22 @@
 
 import Container from "../components/Container/Container";
+// Import for Horizontal-Scrolling
 import { ScrollMenu } from "react-horizontal-scrolling-menu";
 import 'react-horizontal-scrolling-menu/dist/styles.css';
 import useCards from "../hooks/useCards";
+// Import RotatingLines for Loader-Spinner
 import { RotatingLines } from "react-loader-spinner";
+
 const Main = () => {
+    // Load Cards Data from Custom Hooks
     const [cards, isLoading] = useCards()
+    // filter Cards Data based on Category
     const incomplete = cards.filter(data => data.category === "incomplete")
     const toDo = cards.filter(data => data.category === "todo")
     const doing = cards.filter(data => data.category === "doing")
     const underReview = cards.filter(data => data.category === "underReview")
     const completed = cards.filter(data => data.category === "completed")
-
+    // Added Spinner
     if (isLoading) {
         return <div className="flex items-center justify-center h-screen">
             <RotatingLines
@@ -25,7 +30,7 @@ const Main = () => {
     }
 
     return (
-        <div>
+        <div className="w-full">
             <ScrollMenu
                 options={{
                     ratio: 0.9,

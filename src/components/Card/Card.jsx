@@ -1,9 +1,9 @@
 import { FaBuffer, FaRegCalendarAlt, FaWeixin, FaCalendarAlt } from 'react-icons/fa';
 import { RiAttachment2 } from "react-icons/ri";
-const Card = ({data}) => {
-    const handleModal = () => {
-        console.log("attachment Button is Clicked");
-    }
+
+const Card = ({ data, handleModal }) => {
+    
+    
     return (
         <div className="flex flex-col gap-4 p-4 bg-white rounded-md">
             <div className="flex justify-between">
@@ -40,7 +40,7 @@ const Card = ({data}) => {
                         <p>15</p>
                     </div>
                     <div className='flex items-center gap-1'>
-                        <span className='text-xl cursor-pointer' onClick={handleModal}><RiAttachment2 /></span>
+                        <span className='text-xl cursor-pointer' onClick={() => handleModal(data._id)}><RiAttachment2 /></span>
                         <p>25</p>
                     </div>
                     <div className='flex items-center gap-1'>
@@ -48,7 +48,7 @@ const Card = ({data}) => {
                         <p>30-12-2022</p>
                     </div>
                 </div>
-            </div>
+            </div> 
         </div>
     );
 };

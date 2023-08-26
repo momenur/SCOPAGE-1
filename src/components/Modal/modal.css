@@ -1,0 +1,9 @@
+.pure-modal-backdrop .pure-modal{
+    width: 600px;
+}
+.pure-modal .close{
+    background: rgb(202, 29, 29);
+    font-size: 20px;
+    color: white;
+    font-weight: 500;
+}
