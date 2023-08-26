@@ -4,7 +4,7 @@ const useCards = () => {
     const { isLoading, data: cards = [], refetch} = useQuery({
         queryKey: ['cards'],
         queryFn: async () => {
-            const res = await fetch('http://localhost:5000/cards')
+            const res = await fetch('https://scopage-server-momenurislam6-gmailcom.vercel.app/cards')
             return res.json();
         },
     }) 
